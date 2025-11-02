@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "web" {
   count = 3  # Creates 3 instances
 
-  ami           = "ami-0013d032fb010b2c8"
+  ami           = "ami-your-ami"
   instance_type = "t2.micro"
 
   tags = {

@@ -10,10 +10,11 @@ variable "instances" {
 resource "aws_instance" "web" {
   for_each = var.instances
 
-  ami           = "ami-03bf5fc4fc3b34731"
+  ami           = "ami-your ami"
   instance_type = each.value
 
   tags = {
     Name = "${each.key}"
   }
 }
+
